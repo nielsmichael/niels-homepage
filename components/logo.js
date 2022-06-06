@@ -18,7 +18,7 @@ padding: 10px;
 `
 
 const Logo = () => {
-  const webImg = `/img/niels-dev-logo${useColorModeValue('', ''-dark)}.png` // need to figure out logo to put here
+  const webImg = `/img/niels-dev-logo${useColorModeValue('', '-dark')}.png` // need to figure out logo to put here
 
   return (
     <Link href="/">
@@ -27,7 +27,7 @@ const Logo = () => {
           <Image src={webImg} width={20} height={20} alt="logo" />
           <Text 
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-            fontFamily='Roboto'
+            fontFamily='M PLUS Rounded 1c'
             fontWeight="bold"
             ml={3}>
               Niels Michael
