@@ -4,7 +4,7 @@ const Page = () => {
   return (
     <Container>
       <Box borderRadius="lg" bg="#A3CEF1" p={3} mb={6} align="center">
-        Hello, I&apos;m a web developer based in Tokyo, Japan!
+        Hello! I&apos;m a web developer in Tokyo, Japan.
       </Box>
       
       <Box display={{md:'flex'}}>

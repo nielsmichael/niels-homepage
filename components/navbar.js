@@ -7,12 +7,12 @@ import {
   Stack,
   Heading,
   Flex,
+  Menu,
   MenuItem,
   MenuList,
   MenuButton,
   IconButton,
-  useColorModeValue,
-  Menu
+  useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleBtn from './theme-toggle-btn.js'
@@ -40,8 +40,8 @@ const Navbar = props => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue('#E7ECEF', '#333333')}
-      style={{ backdropFilter: 'blur11px' }}
+      bg={useColorModeValue('#E7ECEF', '#34383A')}
+      style={{ backdropFilter: 'blur(11px)' }}
       zIndex={1}
       {...props}
     >
@@ -77,7 +77,7 @@ const Navbar = props => {
           </LinkItem>
         </Stack>
         <Box flex={1} align="right">
-        <ThemeToggleBtn />
+          <ThemeToggleBtn />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
               <MenuButton

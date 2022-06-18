@@ -13,7 +13,7 @@ line-height: 20px;
 padding: 10px;
 
 &:hover img {
-  transform: rotate(20deg);
+  transform: rotate(15deg);
 }
 `
 
@@ -25,13 +25,14 @@ const Logo = () => {
       <a>
         <LogoBox>
           <Image src={webImg} width={20} height={20} alt="logo" />
-          <Text 
-            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-            fontFamily='M PLUS Rounded 1c'
+          <Text
+            color={useColorModeValue('#34383A', '#E7ECEF')}
+            fontFamily="M PLUS Rounded 1c"
             fontWeight="bold"
-            ml={3}>
-              Niels Michael
-            </Text>
+            ml={3}
+          >
+            Niels Michael
+          </Text>
         </LogoBox>
       </a>
     </Link>

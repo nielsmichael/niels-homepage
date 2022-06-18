@@ -20,10 +20,3 @@ const Main = ({children, router}) => {
 }
 
 export default Main
-
-// Color pallete: 
-// E7ECEF - white
-// 274C77 - blue dark
-// 6096BA - blue mid
-// A3CEF1 - blue light
-// 8B8C89 - gray
