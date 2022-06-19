@@ -5,7 +5,7 @@ const Page = () => {
     <Container>
       <Box
         borderRadius="lg"
-        bg={useColorModeValue('#A3CEF1', '#009EF6')}
+        bg={useColorModeValue('#009EF6', '#184B68')}
         p={3}
         mb={6}
         align="center"
@@ -26,7 +26,16 @@ const Page = () => {
           ml={{ md: 6 }}
           align="center"
         >
-          <Image borderColor='#E7ECEF' borderWidth={2} borderStyle='solid' maxWidth='100px' display='inline-block' borderRadius='full' src='/img/niels.jpg' alt='Niels Michael Website Profile Image' />
+          <Image
+            borderColor="#E7ECEF"
+            borderWidth={2}
+            borderStyle="solid"
+            maxWidth="100px"
+            display="inline-block"
+            borderRadius="full"
+            src="/img/niels.jpg"
+            alt="Niels Michael Website Profile Image"
+          />
         </Box>
       </Box>
     </Container>
