@@ -1,6 +1,6 @@
 import { Container, Badge, Link, List, ListItem } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/post'
+import { Title, WorkImage, Meta, PostImage } from '../../components/post'
 import Blurb from '../../components/blurb'
 import Layout from '../../components/layouts/article'
 
@@ -29,10 +29,8 @@ const Article = () => {
           </ListItem>
         </List>
 
-        {/*
-        * Add images here
-        <WorkImage></WorkImage>
-        */}
+        <PostImage src="/img/work/niels-meals.jpg" alt="Niels Meals" />
+        <PostImage src="/img/work/niels-meals-01.jpg" alt="Niels Meals" />
       </Container>
     </Layout>
   )
