@@ -6,13 +6,17 @@ import {
   useColorModeValue,
   Image,
   Link,
-  Button
+  Button,
+  List,
+  ListItem,
+  Icon
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import Blurb from '../components/blurb'
 import { BioSection, BioYear } from '../components/bio'
+import { IoLogoGithub, IoLogoInstagram } from 'react-icons/io5'
 
 const Page = () => {
   return (
@@ -109,12 +113,44 @@ const Page = () => {
         </Section>
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            Fun things I like:
+            Fun things I like
           </Heading>
           <Blurb>
             <Link href="https://ghostwife.bandcamp.com/">Guitar</Link>, very
             heavy metal, Japanese city pop, craft beer, kettlebells
           </Blurb>
+        </Section>
+        <Section delay={0.4}>
+          <Heading as="h3" variant="section-title">
+            On the web
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="https://github.com/nielsmichael" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="blue"
+                  leftIcon={<Icon as={IoLogoGithub} />}
+                >
+                  @nielsmichael
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://www.instagram.com/nielzthephotographer/"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="blue"
+                  leftIcon={<Icon as={IoLogoInstagram} />}
+                >
+                  @nielzthephotographer
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
         </Section>
       </Container>
     </Layout>
