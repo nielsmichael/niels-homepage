@@ -141,7 +141,11 @@ const Page = () => {
             Fun things I like
           </Heading>
           <Blurb>
-            <Link target="_blank" href="https://ghostwife.bandcamp.com/">
+            <Link
+              target="_blank"
+              rel="noreferrer"
+              href="https://ghostwife.bandcamp.com/"
+            >
               {text.fun_text_gtr}
             </Link>
             {text.fun_text}
@@ -153,7 +157,11 @@ const Page = () => {
           </Heading>
           <List>
             <ListItem>
-              <Link href="https://github.com/nielsmichael" target="_blank">
+              <Link
+                href="https://github.com/nielsmichael"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Button
                   variant="ghost"
                   colorScheme="blue"
@@ -167,6 +175,7 @@ const Page = () => {
               <Link
                 href="https://www.instagram.com/nielzthephotographer/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <Button
                   variant="ghost"

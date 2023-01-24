@@ -37,7 +37,7 @@ const LinkItem = ({ href, path, children }) => {
 const ExternalLink = ({ href, children }) => {
   const color = useColorModeValue('#274C77', '#E7ECEF')
   return (
-    <a href={href} target="_blank">
+    <a href={href} target="_blank" rel="noreferrer">
       <Box p={2} color={color}>
         {children}
       </Box>
@@ -113,6 +113,7 @@ const Navbar = props => {
                 <MenuItem
                   as={Link}
                   target="_blank"
+                  rel="noreferrer"
                   href="https://github.com/nielsmichael"
                 >
                   Github
