@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[315],{315:function(e,t,u){u.r(t),t.default={hero_text:"404 \u30a8\u30e9\u30fc",sub_text:"\u30a2\u30af\u30bb\u30b9\u3057\u305fWeb\u30da\u30fc\u30b8\u304c\u5b58\u5728\u3057\u306a\u3044",btn_text:"\u30c8\u30c3\u30d7\u3078\u623b\u308b"}}}]);

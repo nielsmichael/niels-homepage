@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[132],{6132:function(e,t,o){o.r(t),t.default={hero_text:"404 - Not Found",sub_text:"The page you are looking for could not be found.",btn_text:"Back to Top"}}}]);
