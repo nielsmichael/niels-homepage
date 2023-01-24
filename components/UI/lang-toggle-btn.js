@@ -13,22 +13,32 @@ export const LanguageToggle = () => {
   const { locale } = router
   // locale is a string
 
-  return (
-    <Link href={locale} locale={locale}>
-      <StyledBtn
-        aria-controls="simple-menu"
-        aria-haspopup="true"
-        color="primary"
-        onClick={() => {
-          if (locale === 'ja') {
+  if (locale === 'en') {
+    return (
+      <Link href="/ja" locale="ja">
+        <StyledBtn
+          aria-controls="simple-menu"
+          aria-haspopup="true"
+          color="primary"
+        >
+          <TranslateIcon />
+        </StyledBtn>
+      </Link>
+    )
+  } else {
+    return (
+      <a>
+        <StyledBtn
+          aria-controls="simple-menu"
+          aria-haspopup="true"
+          color="primary"
+          onClick={() => {
             router.push('/index', '/', { locale: 'en' })
-          } else {
-            router.push('/ja', '/ja', { locale: 'ja' })
-          }
-        }}
-      >
-        <TranslateIcon />
-      </StyledBtn>
-    </Link>
-  )
+          }}
+        >
+          <TranslateIcon />
+        </StyledBtn>
+      </a>
+    )
+  }
 }
