@@ -6,7 +6,7 @@ import { WorkGridItem } from '../components/grid-link'
 // Assets
 import makotoThumb from '../public/img/work/makoto-investments.jpg'
 import anchorThumb from '../public/img/work/anchor-investments.jpg'
-import nielsMealsThumb from '../public/img/work/niels-meals.jpg'
+// import nielsMealsThumb from '../public/img/work/niels-meals.jpg'
 import Layout from '../components/layouts/article'
 
 const Work = () => {
@@ -37,17 +37,6 @@ const Work = () => {
               Website homepage for real estate acquisition and property
               management company Anchor Investments. Built with NextJS and
               Typescript.
-            </WorkGridItem>
-          </Section>
-          <Section delay={0.3}>
-            <WorkGridItem
-              id="niels-meals"
-              title="Niels' Meals"
-              thumbnail={nielsMealsThumb}
-            >
-              An online ordering front-end interface built with React.
-              Unfortunately, I have not opened my restaurant yet - but when I
-              do, the web app is ready to go.
             </WorkGridItem>
           </Section>
         </SimpleGrid>

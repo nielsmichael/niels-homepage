@@ -1,6 +1,6 @@
 import Logo from './logo'
 import NextLink from 'next/link'
-import { 
+import {
   Container,
   Box,
   Link,
@@ -15,7 +15,8 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import ThemeToggleBtn from './theme-toggle-btn.js'
+import ThemeToggleBtn from './UI/theme-toggle-btn.js'
+import { LanguageToggle } from './UI/lang-toggle-btn'
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href
@@ -23,12 +24,24 @@ const LinkItem = ({ href, path, children }) => {
   return (
     <NextLink href={href}>
       <Link
-       p={2}
-       bg={active ? '#A3CEF1' : undefined}
-       color={active ? '#274C77' : inactiveColor}>
-         {children}
-       </Link>
+        p={2}
+        bg={active ? '#A3CEF1' : undefined}
+        color={active ? '#274C77' : inactiveColor}
+      >
+        {children}
+      </Link>
     </NextLink>
+  )
+}
+
+const ExternalLink = ({ href, children }) => {
+  const color = useColorModeValue('#274C77', '#E7ECEF')
+  return (
+    <a href={href} target="_blank">
+      <Box p={2} color={color}>
+        {children}
+      </Box>
+    </a>
   )
 }
 
@@ -72,11 +85,12 @@ const Navbar = props => {
           <LinkItem href="/about" path={path}>
             About
           </LinkItem>
-          <LinkItem href="/blog" path={path}>
-            Blog
-          </LinkItem>
+          <ExternalLink as="link" href="https://github.com/nielsmichael">
+            Github
+          </ExternalLink>
         </Stack>
         <Box flex={1} align="right">
+          <LanguageToggle />
           <ThemeToggleBtn />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
@@ -96,10 +110,11 @@ const Navbar = props => {
                 <NextLink href="/about" passHref>
                   <MenuItem as={Link}>About</MenuItem>
                 </NextLink>
-                <NextLink href="/blog" passHref>
-                  <MenuItem as={Link}>Blog</MenuItem>
-                </NextLink>
-                <MenuItem as={Link} href="https://github.com/nielsmichael">
+                <MenuItem
+                  as={Link}
+                  target="_blank"
+                  href="https://github.com/nielsmichael"
+                >
                   Github
                 </MenuItem>
               </MenuList>

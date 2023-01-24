@@ -1,4 +1,5 @@
 import NextLink from 'next/link'
+// import Head from 'next/head'  --to do
 import {
   Container,
   Box,
@@ -17,8 +18,12 @@ import Section from '../components/section'
 import Blurb from '../components/blurb'
 import { BioSection, BioYear } from '../components/bio'
 import { IoLogoGithub, IoLogoInstagram } from 'react-icons/io5'
+import { SkillLang, Skills } from '../components/skill'
+import { useLocales } from '@/components/hooks/useLocales'
 
 const Page = () => {
+  const text = useLocales('index')
+
   return (
     <Layout>
       <Container>
@@ -29,15 +34,15 @@ const Page = () => {
           mb={6}
           align="center"
         >
-          Hello! I&apos;m a web developer living in Tokyo, Japan.
+          {text.tag_text}
         </Box>
 
         <Box display={{ md: 'flex' }}>
           <Box flexGrow={1}>
             <Heading as="h2" variant="page-title">
-              Niels Michael
+              {text.hero_name}
             </Heading>
-            <p>Front End & Web Developer / Designer</p>
+            <p>{text.sub_title}</p>
           </Box>
           <Box
             flexShrink={0}
@@ -62,15 +67,11 @@ const Page = () => {
             Work
           </Heading>
           <Blurb>
-            Niels is a web and front end developer with a background in digital
-            marketing. Niels is primarily based in Tokyo, Japan, but he has
-            roots in Nashville, TN where he was born and raised. When not
-            working, he enjoys playing guitar, making music, and drinking
-            coffee. Currently, Niels is working with{' '}
-            <NextLink href="/work/makoto">
-              <Link>Makoto Investments Ltd.</Link>
+            {text.work_text_a}
+            <NextLink href="/work/makoto-investments">
+              <Link>{text.work_company_span}</Link>
             </NextLink>{' '}
-            - a consulting firm in Shinjuku.
+            {text.work_text_b}
           </Blurb>
           <Box align="center" my={4}>
             <NextLink href="/work">
@@ -80,47 +81,73 @@ const Page = () => {
                 color="black"
                 _hover={{ bg: '#00C3FB' }}
               >
-                My Portfolio
+                {text.work_btn_text}
               </Button>
             </NextLink>
           </Box>
         </Section>
         <Section delay={0.2}>
           <Heading as="h3" variant="section-title">
+            Skills
+          </Heading>
+          <Skills>
+            <SkillLang>{text.skills_title}</SkillLang>
+            {text.skills_text}
+          </Skills>
+          <Skills>
+            <SkillLang>{text.languages_title}</SkillLang>
+            {text.languages_text}
+          </Skills>
+          <Skills>
+            <SkillLang>{text.technical_title}</SkillLang>
+            {text.technical_text}
+          </Skills>
+          <Skills>
+            <SkillLang>{text.learning_title}</SkillLang>
+            {text.learning_text}
+          </Skills>
+        </Section>
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
             Bio
           </Heading>
           <BioSection>
             <BioYear>1996</BioYear>
-            Born in Nashville, Tennessee
+            {text.bio_1996_text}
           </BioSection>
           <BioSection>
             <BioYear>2015</BioYear>
-            Began studying web development and programming
+            {text.bio_2015_text}
           </BioSection>
           <BioSection>
             <BioYear>2016</BioYear>
-            Moved to Tokyo, Japan
+            {text.bio_2016_text}
           </BioSection>
           <BioSection>
             <BioYear>2020</BioYear>
-            Completed Bachelor&apos;s degree of Liberal Arts from Tokyo
-            Christian University (東京基督教大リベラルアーツ学士)
+            {text.bio_2020_text_a}
+          </BioSection>
+          <BioSection>
+            <BioYear>2020</BioYear>
+            {text.bio_2020_text_b}
           </BioSection>
           <BioSection>
             <BioYear>2021</BioYear>
-            Began work at Makoto Investments Ltd.
+            {text.bio_2021_text}
           </BioSection>
         </Section>
-        <Section delay={0.3}>
+        <Section delay={0.4}>
           <Heading as="h3" variant="section-title">
             Fun things I like
           </Heading>
           <Blurb>
-            <Link href="https://ghostwife.bandcamp.com/">Guitar</Link>, very
-            heavy metal, Japanese city pop, craft beer, kettlebells
+            <Link target="_blank" href="https://ghostwife.bandcamp.com/">
+              {text.fun_text_gtr}
+            </Link>
+            {text.fun_text}
           </Blurb>
         </Section>
-        <Section delay={0.4}>
+        <Section delay={0.5}>
           <Heading as="h3" variant="section-title">
             On the web
           </Heading>
