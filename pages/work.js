@@ -4,7 +4,7 @@ import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Section from '../components/section'
 import { WorkGridItem, WorkList } from '../components/grid-link'
 import Layout from '../components/layouts/article'
-import { useLocales } from '../components/hooks/useLocales'
+import { useLocales } from '@/components/hooks/useLocales'
 
 // Assets
 import makotoThumb from '../public/img/work/makoto-investments.png'
@@ -14,6 +14,7 @@ import costcoThumb from '../public/img/work/costco-inzai__header.png'
 
 const Work = () => {
   const text = useLocales('work')
+
   return (
     <Layout title="Work History">
       <Container>
