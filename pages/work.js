@@ -29,7 +29,7 @@ const Work = () => {
               title={text.makoto_title}
               dates={text.makoto_dates}
               company={text.makoto_company}
-              thumbnail={makotoThumb.src}
+              thumbnail={makotoThumb}
               link="https://makoto-investments.com/"
             >
               <WorkList
@@ -50,7 +50,7 @@ const Work = () => {
               title={text.glitch_title}
               dates={text.glitch_dates}
               company={text.glitch_company}
-              thumbnail={glitchThumb.src}
+              thumbnail={glitchThumb}
               link="https://glitch.finance/"
             >
               <WorkList
@@ -69,7 +69,7 @@ const Work = () => {
               title={text.coto_title}
               dates={text.coto_dates}
               company={text.coto_company}
-              thumbnail={cotoThumb.src}
+              thumbnail={cotoThumb}
               link="https://cotoworld.jp/"
             >
               <WorkList
@@ -90,7 +90,7 @@ const Work = () => {
               title={text.costco_title}
               dates={text.costco_dates}
               company={text.costco_company}
-              thumbnail={costcoThumb.src}
+              thumbnail={costcoThumb}
               link="https://www.costco.co.jp/"
             >
               <WorkList workList={[text.costco_task_1, text.costco_task_2]} />

@@ -39,12 +39,7 @@ export const WorkGridItem = ({
 }) => (
   <Box w="100%" align="left">
     <LinkBox>
-      <Image
-        src={thumbnail}
-        alt={title}
-        className="grid-item-thumbnail"
-        placeholder="blur"
-      />
+      <Image src={thumbnail} alt={title} className="grid-item-thumbnail" />
       <LinkOverlay href={link} target="_blank" rel="nofollow">
         <Text mt={2} fontSize={20} as="b">
           {title}
