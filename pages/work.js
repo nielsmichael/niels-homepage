@@ -7,10 +7,10 @@ import Layout from '../components/layouts/article'
 import { useLocales } from '../components/hooks/useLocales'
 
 // Assets
-import makotoThumb from '../public/img/work/makoto-investments.jpg'
+import makotoThumb from '../public/img/work/makoto-investments.png'
 import glitchThumb from '../public/img/work/glitch-protocol_web3.png'
 import cotoThumb from '../public/img/work/coto-world__header.png'
-import costcoThumb from '../public/img/work/costco-inzai__header.jpeg'
+import costcoThumb from '../public/img/work/costco-inzai__header.png'
 
 const Work = () => {
   const text = useLocales('work')
@@ -28,7 +28,7 @@ const Work = () => {
               title={text.makoto_title}
               dates={text.makoto_dates}
               company={text.makoto_company}
-              thumbnail={makotoThumb}
+              thumbnail={makotoThumb.src}
               link="https://makoto-investments.com/"
             >
               <WorkList
@@ -49,7 +49,7 @@ const Work = () => {
               title={text.glitch_title}
               dates={text.glitch_dates}
               company={text.glitch_company}
-              thumbnail={glitchThumb}
+              thumbnail={glitchThumb.src}
               link="https://glitch.finance/"
             >
               <WorkList
@@ -68,7 +68,7 @@ const Work = () => {
               title={text.coto_title}
               dates={text.coto_dates}
               company={text.coto_company}
-              thumbnail={cotoThumb}
+              thumbnail={cotoThumb.src}
               link="https://cotoworld.jp/"
             >
               <WorkList
@@ -89,7 +89,7 @@ const Work = () => {
               title={text.costco_title}
               dates={text.costco_dates}
               company={text.costco_company}
-              thumbnail={costcoThumb}
+              thumbnail={costcoThumb.src}
               link="https://www.costco.co.jp/"
             >
               <WorkList workList={[text.costco_task_1, text.costco_task_2]} />
