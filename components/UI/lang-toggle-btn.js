@@ -5,7 +5,7 @@ import { Button } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
 const StyledBtn = styled(Button)`
-  margin-right: 1.1em;
+  margin-right: 8px;
 `
 
 export const LanguageToggle = () => {

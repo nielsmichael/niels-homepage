@@ -25,7 +25,7 @@ const Page = () => {
   const text = useLocales('index')
 
   return (
-    <Layout>
+    <Layout title={text.meta_title}>
       <Container>
         <Box
           borderRadius="lg"
